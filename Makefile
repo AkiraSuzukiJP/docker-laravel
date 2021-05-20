@@ -3,9 +3,9 @@ up:
 build:
 	docker-compose build --no-cache --force-rm
 laravel-install:
-	docker-compose exec app composer create-project --prefer-dist laravel/laravel .
+	docker-compose exec app composer create-project --prefer-dist laravel/laravel . "8.*"
 create-project:
-	mkdir -p backend
+	mkdir backend
 	@make build
 	@make up
 	@make laravel-install
@@ -13,6 +13,7 @@ create-project:
 	docker-compose exec app php artisan storage:link
 	docker-compose exec app chmod -R 777 storage bootstrap/cache
 	@make fresh
+	@make jetstream-install
 install-recommend-packages:
 	docker-compose exec app composer require doctrine/dbal
 	docker-compose exec app composer require --dev ucan-lab/laravel-dacapo
@@ -129,3 +130,9 @@ ide-helper:
 	docker-compose exec app php artisan ide-helper:generate
 	docker-compose exec app php artisan ide-helper:meta
 	docker-compose exec app php artisan ide-helper:models --nowrite
+jetstream-install:
+	docker-compose exec app composer require laravel/jetstream
+	docker-compose exec app php artisan jetstream:install livewire
+	docker-compose exec app php artisan migrate
+	@make yarn
+	@make yarn-dev

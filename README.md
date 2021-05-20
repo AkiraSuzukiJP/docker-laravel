@@ -12,7 +12,7 @@ Build a simple laravel development environment with docker-compose.
 ## Usage
 
 ```bash
-$ git clone git@github.com:ucan-lab/docker-laravel.git
+$ git clone https://github.com/AkiraSuzukiJP/docker-laravel.git
 $ cd docker-laravel
 $ make create-project # Install the latest Laravel project
 $ make install-recommend-packages # Optional
@@ -22,8 +22,8 @@ http://localhost
 
 ## Tips
 
-- Read this [Makefile](https://github.com/ucan-lab/docker-laravel/blob/main/Makefile).
-- Read this [Wiki](https://github.com/ucan-lab/docker-laravel/wiki).
+- Read this [Makefile](https://github.com/AkiraSuzukiJP/docker-laravel/blob/main/Makefile).
+- Read this [Wiki](https://github.com/AkiraSuzukiJP/docker-laravel/wiki).
 
 ## Container structures
 
@@ -49,3 +49,10 @@ http://localhost
 
 - Base image
   - [mysql/mysql-server](https://hub.docker.com/r/mysql/mysql-server):8.0
+
+
+
+### Setup
+make create-project
+
+ブラウザにて http://127.0.0.1へアクセス
