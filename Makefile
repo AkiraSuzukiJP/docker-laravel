@@ -9,11 +9,6 @@ create-project:
 	@make build
 	@make up
 	@make laravel-install
-	docker-compose exec app php artisan key:generate
-	docker-compose exec app php artisan storage:link
-	docker-compose exec app chmod -R 777 storage bootstrap/cache
-	@make fresh
-	@make jetstream-install
 install-recommend-packages:
 	docker-compose exec app composer require doctrine/dbal
 	docker-compose exec app composer require --dev ucan-lab/laravel-dacapo
@@ -31,6 +26,7 @@ init:
 	docker-compose exec app php artisan storage:link
 	docker-compose exec app chmod -R 777 storage bootstrap/cache
 	@make fresh
+	@make jetstream-install
 remake:
 	@make destroy
 	@make init

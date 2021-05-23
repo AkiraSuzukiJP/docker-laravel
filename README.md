@@ -16,6 +16,8 @@ $ git clone https://github.com/AkiraSuzukiJP/docker-laravel.git
 $ cd docker-laravel
 $ make create-project # Install the latest Laravel project
 $ make install-recommend-packages # Optional
+$ make init
+
 ```
 
 http://localhost
@@ -51,8 +53,5 @@ http://localhost
   - [mysql/mysql-server](https://hub.docker.com/r/mysql/mysql-server):8.0
 
 
-
-### Setup
-make create-project
 
 ブラウザにて http://127.0.0.1へアクセス
