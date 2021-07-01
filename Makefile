@@ -26,7 +26,6 @@ init:
 	docker-compose exec app php artisan storage:link
 	docker-compose exec app chmod -R 777 storage bootstrap/cache
 	@make fresh
-	@make jetstream-install
 remake:
 	@make destroy
 	@make init
