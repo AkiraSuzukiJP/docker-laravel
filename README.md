@@ -13,7 +13,7 @@ Build a simple laravel development environment with docker-compose.
 
 ```bash
 $ git clone https://github.com/AkiraSuzukiJP/docker-laravel.git
-$ cd docker-laravel
+
 $ make create-project # Install the latest Laravel project
 $ make install-recommend-packages # Optional
 $ make jetstream-install

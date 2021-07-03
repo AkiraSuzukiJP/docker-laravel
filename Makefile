@@ -129,5 +129,3 @@ jetstream-install:
 	docker-compose exec app composer require laravel/jetstream
 	docker-compose exec app php artisan jetstream:install livewire
 	docker-compose exec app php artisan migrate
-	@make yarn
-	@make yarn-dev
