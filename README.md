@@ -18,6 +18,8 @@ $ make create-project # Install the latest Laravel project
 $ make install-recommend-packages # Optional
 $ make jetstream-install
 $ make init
+$ make npm-install
+$ make npm-dev
 
 ```
 
