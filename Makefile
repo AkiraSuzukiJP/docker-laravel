@@ -9,6 +9,8 @@ create-project:
 	@make build
 	@make up
 	@make laravel-install
+	@make jetstream-install
+
 install-recommend-packages:
 	docker-compose exec app composer require doctrine/dbal
 	docker-compose exec app composer require --dev ucan-lab/laravel-dacapo
@@ -128,4 +130,3 @@ ide-helper:
 jetstream-install:
 	docker-compose exec app composer require laravel/jetstream
 	docker-compose exec app php artisan jetstream:install livewire
-	docker-compose exec app php artisan migrate
